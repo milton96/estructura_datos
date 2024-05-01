@@ -4,7 +4,7 @@ class Nodo:
         self.left = None
         self.right = None
     
-def agregar(nodo: Nodo, valor: any) -> Nodo:
+def agregar(nodo: Nodo, valor: int) -> Nodo:
     if nodo is None:
         return Nodo(valor)
     else:
