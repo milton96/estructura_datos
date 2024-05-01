@@ -1,4 +1,4 @@
-from nodo import insert, search, preorder, postorder, inorder, height, height_hacker_rank, levelorder
+from nodo import agregar, buscar, preorder, postorder, inorder, height, height_vertices, levelorder
 
 if __name__== '__main__':
     #          50 
@@ -10,18 +10,18 @@ if __name__== '__main__':
     #              79  81
     root = None
 
-    root = insert(root, 50)
-    insert(root, 30)
-    insert(root, 20)
-    insert(root, 40)
-    insert(root, 70)
-    insert(root, 60)
-    insert(root, 80)
-    insert(root, 81)
-    insert(root, 79)
+    root = agregar(root, 50)
+    agregar(root, 30)
+    agregar(root, 20)
+    agregar(root, 40)
+    agregar(root, 70)
+    agregar(root, 60)
+    agregar(root, 80)
+    agregar(root, 81)
+    agregar(root, 79)
 
     v = 41
-    encontrado = search(root, v)
+    encontrado = buscar(root, v)
     msj = "encontrado" if encontrado is not None else "no encontrado"
     print(v, msj)
 
@@ -38,7 +38,7 @@ if __name__== '__main__':
     print(height(root))
 
     print("\nheight hacker rank")
-    print(height_hacker_rank(root))
+    print(height_vertices(root))
 
     print("\nlevel order")
     levelorder(root)
