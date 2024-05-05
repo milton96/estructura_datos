@@ -1,4 +1,3 @@
-
 def is_balanced(s: str) -> str:
     if len(s) == 1:
         return False
@@ -21,7 +20,18 @@ def is_balanced(s: str) -> str:
 
     return "SI" if len(stack) == 0 else "NO"
 
+def is_balanced_v2(s: str) -> bool:
+    stack = []
+    d = {'{': '}', '[': ']', '(': ')'}
+    for i in s:
+        if i in d:
+            stack.append(i)
+        elif len(stack) == 0 or d[stack.pop()] != i:
+            return False
+    return len(stack) == 0
+
 if __name__ == "__main__":
     s1 = ")(){}"
 
     print(is_balanced(s1))
+    print(is_balanced_v2(s1))
